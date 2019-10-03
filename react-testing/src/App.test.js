@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, cleanup } from "@testing-library/react"
+import { render, cleanup, fireEvent } from "@testing-library/react"
 import "@testing-library/jest-dom/extend-expect";
-import { fireEvent } from '@testing-library/dom';
+// import { fireEvent } from '@testing-library/dom';
 
 import App from './App';
 import Dashboard from './components/Dashboard';
@@ -31,9 +31,7 @@ test('Strike function adds 1 point to strike points', () => {
     fireEvent.click(getByTestId('ballButton'));
     fireEvent.click(getByTestId('ballButton'));
   
-    setTimeout(() => {
       expect(getByTestId('ballValue')).toHaveTextContent(0);
-    }, 1000)
   })
 
   test("Strike function should reset displayed strike value to 0 after 3 clicks", () => {
@@ -43,9 +41,7 @@ test('Strike function adds 1 point to strike points', () => {
     fireEvent.click(getByTestId('strikeButton'));
     fireEvent.click(getByTestId('strikeButton'));
     
-    setTimeout(() => {
       expect(getByTestId('strikeValue')).toHaveTextContent(0);
-    }, 1000)
   })
 
   test("Foul button should not increment the strike value, if strikes are at 2", () => {
