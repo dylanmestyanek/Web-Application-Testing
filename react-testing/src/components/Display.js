@@ -1,24 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 
-class Display extends React.Component {
-    render(){
-        return(
-            <DisplayContainer>
-                <h1>Game</h1>
-                <DisplayTextContainer>
-                    <div>
-                        <h3>Balls</h3>
-                        <p>3</p>
-                    </div>
-                    <div>
-                        <h3>Strikes</h3>
-                        <p>4 </p>
-                    </div>
-                </DisplayTextContainer>
-            </DisplayContainer>
-        )
-    }
+const Display = (props) => {
+ 
+    return(
+        <DisplayContainer>
+            <h1>Game</h1>
+            <DisplayTextContainer>
+                <div>
+                    <h3>Balls</h3>
+                    <p>{props.balls}</p>
+                </div>
+                <div>
+                    <h3>Strikes</h3>
+                    <p data-testid="strikeValue">{props.strikes}</p>
+                </div>
+            </DisplayTextContainer>
+        </DisplayContainer>
+    )
 }
 
 export default Display;

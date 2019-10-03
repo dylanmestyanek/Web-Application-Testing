@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-import Display from "./components/Display"
 import DashBoard from "./components/Dashboard"
 
 class App extends React.Component {
@@ -12,7 +11,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Display />
         <DashBoard />
         
       </div>
