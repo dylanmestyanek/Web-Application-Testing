@@ -9,7 +9,7 @@ const Display = (props) => {
             <DisplayTextContainer>
                 <div>
                     <h3>Balls</h3>
-                    <p>{props.balls}</p>
+                    <p data-testid="ballValue">{props.balls}</p>
                 </div>
                 <div>
                     <h3>Strikes</h3>
